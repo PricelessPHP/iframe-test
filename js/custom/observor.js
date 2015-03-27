@@ -18,7 +18,7 @@
 
 $(document).ready(function() {	
 	
-	$(document).on('keyup', '#frmTargetContent', function(event) {
+	$(document).on('keyup change', '#frmTargetContent', function(event) {
 		var valid			= false;
 		var targetUrl		= $.trim( $('#targetUrl').val() );
 		var targetHeight	= $('#targetHeight').val();
@@ -57,10 +57,26 @@ $(document).ready(function() {
 		// hide the form
 		$('#frmTargetContent').hide();
 		
+		// show the restart button
+		$('#container-refresh').show();
+		
 		// display the iframe
 		$('#iframe-container').show();
 		
 		return false;
-	});	
+	});
+	
+	$('#btnReload').click( function(event) {
+		event.preventDefault();
+		
+		// hide the restart button
+		$('#container-refresh').hide();
+		
+		// hide the iframe
+		$('#iframe-container').hide();
+		
+		// show the form
+		$('#frmTargetContent').show();		
+	});
 	
 });
