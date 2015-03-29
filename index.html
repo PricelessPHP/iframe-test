@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
+
+        <title>PricelessPHP &mdash; iframe Tester</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/custom/navbar-fixed-top.css" rel="stylesheet">
+        <link href="css/custom/iframe.css" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link href="css/font-awesome/font-awesome.min.css" rel="stylesheet">        
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="js/html5shiv.min.js"></script>
+            <script type="text/javascript" src="js/respond.min.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript">
+            var DEFAULT_HEIGHT  = 500;
+            var DEFAULT_WIDTH   = '100%';
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand" href=""><i class="fa fa-thumbs-o-up"></i> iframe Tester</a>
+                </div>
+                
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+			            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Template <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">Stepstone</a>
+                                </li>
+			                 </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="container">
+        
+            <form id="frmTargetContent" name="frmTargetContent" role="form" action="" method="POST">
+                <div class="form-group">
+			        <input id="targetUrl" name="target_url" type="text" class="form-control input-lg" placeholder="Target URL">
+			    </div>
+			    
+                <div class="form-group">
+                    <input id="targetHeight" name="target_height" type="text" class="form-control input-lg" placeholder="Target Height">
+                </div>
+                
+                <div class="form-group">
+                    <input id="targetWidth" name="target_width" type="text" class="form-control input-lg" placeholder="Target Width">
+                </div>                			    
+
+                <div class="pull-right">
+                    <button id="btnSave" type="submit" class="btn btn-lg btn-primary" DISABLED><i class="fa fa-check"></i> Save</button>
+                </div>                    
+            </form>        
+
+			<!-- START:      iframe -->
+			<div id="iframe-container">
+                <h2>Result</h2>
+                <hr>
+                			
+                <iframe id="iframe-main"></iframe>
+			</div>
+			<!-- eND:        iframe -->
+
+        </div> <!-- /container -->
+
+	    <!-- jQuery -->
+	    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	    
+	    <!-- Bootstrap -->
+	    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	    
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script type="text/javascript" src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- Custom JS -->
+        <script type="text/javascript" src="js/custom/observor.js"></script>
+                
+    </body>
+</html>

@@ -1,0 +1,8 @@
+#iframe-main {
+	width: 100%;
+	border: none;	
+}
+
+#iframe-container {
+	display: none;
+}
